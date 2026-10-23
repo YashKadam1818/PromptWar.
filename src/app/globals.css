@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FAF7F2;
+  --foreground: #1F2421;
+  --ivory: #FAF7F2;
+  --charcoal: #1F2421;
+  --charcoal-muted: #595E5B;
+  --terracotta: #C85A32;
+  --terracotta-hover: #B24E2A;
+  --sage: #6B8E7B;
+  --sage-light: #EBF1ED;
+  --sand: #E8DFD8;
+  --sand-light: #F4EFEA;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial Serif font utility */
+.font-editorial {
+  font-family: Georgia, "Playfair Display", "Cormorant Garamond", Cambria, "Times New Roman", serif;
+  letter-spacing: -0.015em;
+}
+
+/* Subtle focus ring for accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #C85A32;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbars for logs */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #D8CFC8;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #C85A32;
 }
